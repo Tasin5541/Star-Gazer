@@ -16,14 +16,16 @@
 
 .left {
   text-align: center;
-  width: 50%;
+  min-width: 250px;
+  min-height: 217px;
   border: thin solid #ddd;
 }
 
 .right {
   text-align: center;
   padding: 10px;
-  width: 50%;
+  min-width: 250px;
+  min-height: 217px;
   border: thin solid #ddd;
 }
 
@@ -55,8 +57,13 @@
 
 .timer {
   color: #666;
+  text-align: center;
   margin-top: 3px;
   margin-left: 3px;
+}
+
+.rules {
+  padding: 15px;
 }
 
 .game-done .message {
@@ -80,14 +87,14 @@
   }
 
   .left {
-    min-width: 250px;
+    width: 250px;
     min-height: 217px;
     flex: 1;
   }
 
   .right {
     flex: 1;
-    min-width: 250px;
+    width: 250px;
     min-height: 217px;
   }
 }

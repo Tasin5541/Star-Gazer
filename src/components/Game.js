@@ -77,49 +77,51 @@ const Game = (props) => {
   };
 
   return (
-    <div className="game">
-      <div className="help">
-        Pick 1 or more numbers that sum to the number of stars
-      </div>
-      <div className="body">
-        <div className="left">
-          {gameStatus !== "active" ? (
-            <PlayAgain onClick={props.startNewGame} gameStatus={gameStatus} />
-          ) : (
-            <StarsDisplay count={stars} />
-          )}
+    <div className="d-flex align-items-center min-vh-100">
+      <div className="game">
+        <div className="help">
+          <h2>Star Gazer</h2>
         </div>
-        <div className="right">
-          {utils.range(1, 9).map((number) => (
-            <PlayNumber
-              key={number}
-              status={numberStatus(number)}
-              number={number}
-              onClick={onNumberClick}
-            />
-          ))}
+        <div className="body">
+          <div className="left">
+            {gameStatus !== "active" ? (
+              <PlayAgain onClick={props.startNewGame} gameStatus={gameStatus} />
+            ) : (
+              <StarsDisplay count={stars} />
+            )}
+          </div>
+          <div className="right">
+            {utils.range(1, 9).map((number) => (
+              <PlayNumber
+                key={number}
+                status={numberStatus(number)}
+                number={number}
+                onClick={onNumberClick}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="timer text-danger">Time Remaining: {secondsLeft}</div>
-      <div>
-        <p>
-          <strong>Rules:</strong>
-        </p>
-        <ul>
-          <li>
-            Select a number that sums upto the numbers of stars displayed on the
-            left
-          </li>
-          <li>Example: 9 stars = 9 or (8+1) or (5+4)</li>
-          <li>
-            If the sum of numbers exceeds the total star count, the number will
-            turn red
-          </li>
-          <li>
-            You can de-select a number if it's red or blue. You can't de-select
-            a green number
-          </li>
-        </ul>
+        <div className="timer text-danger">Time Remaining: {secondsLeft}</div>
+        <div className="rules">
+          <h4>
+            <strong>Rules:</strong>
+          </h4>
+          <ul>
+            <li>
+              Select a number that sums upto the numbers of stars displayed on
+              the left
+            </li>
+            <li>Example: 9 stars = 9 or (8+1) or (5+4)</li>
+            <li>
+              If the sum of numbers exceeds the total star count, the number
+              will turn red
+            </li>
+            <li>
+              You can de-select a number if it's red or blue. You can't
+              de-select a green number
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
