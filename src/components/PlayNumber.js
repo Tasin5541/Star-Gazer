@@ -2,7 +2,7 @@ import React from "react";
 
 const PlayNumber = (props) => (
   <button
-    className="number"
+    className="number btn"
     style={{ backgroundColor: colors[props.status] }}
     onClick={() => props.onClick(props.number, props.status)}
   >

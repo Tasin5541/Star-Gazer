@@ -44,6 +44,7 @@
   height: 45px;
   margin: 10px;
   font-size: 25px;
+  padding: 0;
 }
 
 .number:focus,
@@ -79,19 +80,21 @@
   }
 
   .left {
-    padding: 10px;
-    min-height: 322px;
+    min-width: 250px;
+    min-height: 217px;
     flex: 1;
   }
 
   .right {
     flex: 1;
+    min-width: 250px;
+    min-height: 217px;
   }
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .body {
     flex-direction: column;
     flex: auto;
   }
-}
+} */

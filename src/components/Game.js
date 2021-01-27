@@ -100,7 +100,7 @@ const Game = (props) => {
           ))}
         </div>
       </div>
-      <div className="timer">Time Remaining: {secondsLeft}</div>
+      <div className="timer text-danger">Time Remaining: {secondsLeft}</div>
       <div>
         <p>
           <strong>Rules:</strong>
